@@ -1,0 +1,10 @@
+<h1>Houses</h1>
+<%= link_to "New House", new_house_path %>
+<div class="container">
+<% @houses.each do |house| %>
+  <div class="item">
+  <h2><%= link_to house.name, house_path(house) %><br> <%= link_to "Delete", house_path(house), method: :delete %></h2>
+  <img src="<%= house.img_url %>">
+</div>
+<% end %>
+</div>

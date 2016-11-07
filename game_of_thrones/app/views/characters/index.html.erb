@@ -1,0 +1,10 @@
+<h1>Characters</h1>
+<%= link_to "New Character", new_character_path %>
+<div class="container">
+<% @characters.each do |character| %>
+  <div class="item">
+  <h2><%= link_to character.name, character_path(character) %><br> <%= link_to "Delete", character_path(character), method: :delete %></h2>
+  <img src="<%= character.img_url %>">
+</div>
+<% end %>
+</div>

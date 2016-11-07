@@ -1,0 +1,14 @@
+<%= form_for @character do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :age %>
+<%= f.text_field :age %>
+<%= f.label :img_url %>
+<%= f.text_field :img_url %>
+<%= select_tag :house_id, options_for_select(@houses) %>
+<%= f.submit %>
+<% end %>
+
+<% @character.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>

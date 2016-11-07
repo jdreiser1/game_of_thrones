@@ -1,0 +1,16 @@
+<h1>House</h1>
+<h2><%= @house.name %></h2>
+<p><%= link_to 'Edit', edit_house_path(@house) %></p>
+<img src="<%= @house.img_url %>">
+<p><%= @house.motto %> </p>
+<p><%= @house.region %> </p>
+<h1>Characters</h1>
+<div class="container">
+<% @house.characters.each do |character| %>
+<div class="item">
+<h2><%= character.name %></h2>
+<h2><%= character.age %></h2>
+<img src="<%= character.img_url %>">
+</div>
+<% end %>
+</div>

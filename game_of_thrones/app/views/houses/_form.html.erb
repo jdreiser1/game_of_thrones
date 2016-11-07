@@ -1,0 +1,15 @@
+<%= form_for @house do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :motto %>
+<%= f.text_field :motto %>
+<%= f.label :region %>
+<%= f.text_field :region %>
+<%= f.label :img_url %>
+<%= f.text_field :img_url %>
+<%= f.submit %>
+<% end %>
+
+<% @house.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
